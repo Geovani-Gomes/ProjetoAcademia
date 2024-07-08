@@ -1,0 +1,1 @@
+Para visualizar a tela do projeto, acesse o Vs Code, instale a extensão Live Server se ainda não o tiver, clique com o botão direito do mouse no arquivo HTML e selecione a opção "Open with Live Server".
