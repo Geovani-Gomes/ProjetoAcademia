@@ -3,6 +3,7 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
+  font-size: 18px; 
 }
 
 header {
@@ -29,7 +30,7 @@ header h1 {
 
 header p {
   color: white;
-  font-size: 1em;
+  font-size: 1.2em; 
   margin: 10px 0 0 0;
 }
 
@@ -46,148 +47,32 @@ header img {
   transform: translateY(-50%);
 }
 
-.alinhamento-titulos {
-  padding-left: 10px;
-  margin-left: 0;
-}
-
-.flex-item {
-  position: relative;
-}
-
-.imagem-musculacao {
-  position: absolute;
-  bottom: 117px;
-  left: 37%;
-  transform: translateX(-50%);
-  width: 200px;
-}
-
-.imagem-natacao {
-  position: absolute;
-  bottom: 118px;
-  left: 68%;
-  transform: translateX(-50%);
-  width: 247px;
-}
-
-.imagem-luta {
-  position: absolute;
-  bottom: -8px;
-  left: 38.5%;
-  transform: translateX(-50%);
-  width: 220px;
-}
-
-.imagem-yoga {
-  position: absolute;
-  bottom: -5px;
-  left: 69%;
-  transform: translateX(-50%);
-  width: 220px;
-}
-
-.imagem-personal {
-  position: absolute;
-  bottom: 19px;
-  left: 32%;
-  transform: translateX(-50%);
-  width: 150px;
-}
-
-.imagem-fisioterapia {
-  position: absolute;
-  bottom: 19px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 150px;
-}
-
-.imagem-nutricionista {
-  position: absolute;
-  bottom: 19px;
-  left: 71%;
-  transform: translateX(-50%);
-  width: 157px;
-}
-
-.imagem-psicologia {
-  position: absolute;
-  bottom: 19px;
-  left: 92%;
-  transform: translateX(-50%);
-  width: 150px;
-}
-
-.imagem-ambiente {
-  position: absolute;
-  bottom: 19px;
-  left: 46%;
-  transform: translateX(-50%);
-  width: 150px;
-}
-
-.imagem-vestiario {
-  position: absolute;
-  bottom: 19px;
-  left: 66%;
-  transform: translateX(-50%);
-  width: 150px;
-}
-
-.imagem-descanso {
-  position: absolute;
-  bottom: 19px;
-  left: 86.5%;
-  transform: translateX(-50%);
-  width: 150px;
-}
-
 footer {
   background-color: black;
   padding: 20px;
   height: 20vh;
   width: 100%;
-  bottom: 0;
-}
-
-footer {
-  background-color: black;
-  width: 100%;
-  bottom: 0;
-  height: 100px;
   color: #fff;
   text-align: center;
-  padding: 20px;
 }
 
 footer p {
   color: white;
-  font-size: 16px;
+  font-size: 1.2em; 
   text-align: center;
   padding: 10px;
 }
 
-footer .redes-sociais-container {
+footer .redes-sociais {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   margin-top: 10px;
 }
 
-.redes-sociais a {
-  display: inline-block;
-  margin: 0 5px;
-}
-
 .redes-sociais img {
-  width: 30px;
+  width: 50px;
   height: auto;
-  margin-top: 5px;
-  border: none; 
-  outline: none; 
-  box-shadow: none; 
-  filter: grayscale(100%);
+  margin: 0 10px; 
 }
 
 img {
@@ -196,36 +81,186 @@ img {
   box-shadow: none;
 }
 
-footer img[src="whatsapp.png"] {
-  filter: none; 
-  width: 40px; 
-  height: auto;
-  margin-top: -5px; 
+
+.content-with-carousel {
+  display: flex;
+  flex-direction: row; 
+  align-items: flex-start; 
+  margin-bottom: 30px;
+  padding-left: 50px; 
+}  
+
+.text-content {
+  padding-right: 20px; 
+  font-size: 1.2em; 
+  text-align: left; 
 }
 
-footer img[src="instagram.png"] {
-  filter: none; 
-  width: 40px; 
-  height: auto;
-  margin-top: -5px; 
+.move-left { 
+  margin-left: -45px; 
+}
+.move-carousel-right { 
+  margin-left: 30px;  
 }
 
-footer img[src="facebook.png"] {
-  filter: none; 
-  width: 40px; 
-  height: auto;
-  margin-top: -5px; 
+.carousel-container {
+  position: relative;
+  width: 400px; 
+  overflow: hidden;
+  margin-top: 10px; 
 }
 
-footer img[src="twitter.png"] {
-  filter: none; 
-  width: 40px; 
-  height: auto;
-  margin-top: -5px; 
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: calc(400px * 4); 
 }
 
-footer img {
-  filter: none;
-  width: 30px;
-  height: auto;
+.carousel-slide img {
+  width: 400px; 
+  height: 250px; 
+  object-fit: cover; 
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px; 
+  left: 50%;
+  transform: translateX(-50%); 
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; 
+  background-color: white; 
+  margin: 0 5px; 
+  cursor: pointer; 
+}
+
+.indicator.active {
+  background-color: black; 
+}
+
+
+.text-right {
+  padding-left: -10px; 
+}
+
+.title-right {
+  padding-left: 0; 
+  text-align: left; 
+}
+
+
+#diferencial {
+  margin-right: -70px; 
+  margin-left: 30px;
+}
+
+#diferencial ul {
+  font-size: 1.4em; 
+}
+
+#servicos {
+  margin-left: 20px;
+}
+
+#chamada {
+  margin-left: 134px;
+}
+
+
+#chamada .text-right {
+  margin-left: -11px; 
+}
+
+
+.move-left-more {
+  margin-left: -118px !important; 
+}
+
+
+.services-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: 20px; 
+}
+
+
+.content-with-carousel {
+  flex: 1; 
+}
+
+
+.third-carousel {
+  padding-left: 0; 
+  margin-left: 0; 
+}
+
+
+.services-container .content-with-carousel:nth-of-type(2) .carousel-container {
+  margin-left: 80px; 
+}
+
+.services-container .content-with-carousel:first-child .carousel-container {
+  margin-left: 80px; 
+}
+
+
+.larger-text {
+  font-size: 1.2em; 
+  font-weight: normal; 
+  margin-left: 10px;
+}
+
+
+#sobre {
+  width: 100%; 
+  padding: 0; 
+  margin: 0; 
+  margin-top: 20px; 
+}
+
+#sobre p {
+  text-align: justify; 
+  margin: 0; 
+  padding: 0; 
+}
+
+
+.smaller-text {
+  font-size: 1em; 
+  font-weight: normal; 
+  margin-top: 10px; 
+  text-align: justify; 
+}
+
+
+.indent {
+  display: inline-block; 
+  width: 20px; 
 }
